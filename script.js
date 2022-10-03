@@ -31,7 +31,7 @@ function displayData(data) {
       ${data.data
             .map(song => `<li>
                     <div>
-                        <strong>${song.artist.name}</strong> -${song.title} 
+                        <strong>${song.artist.name}</strong> - ${song.title} 
                     </div>
                     <span data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</span>
                 </li>`
@@ -52,7 +52,7 @@ result.addEventListener('click', e => {
 
         getLyrics(artist, songTitle)
     }
-})
+});
 
 // Get lyrics for song
 async function getLyrics(artist, songTitle) {
