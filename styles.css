@@ -23,11 +23,11 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url(./images/music.jpg) no-repeat center;
+    background: url(./images/music.jpg) no-repeat;
     background-position: 0 -90px;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
@@ -133,14 +133,12 @@ section .container {
     margin: 0 auto;
     text-align: center;
     color: #fff;
-    padding: 3rem 0;
 }
 
 .songs {
     width: 90%;
     list-style: none;
     margin: 0 auto;
-    padding: 2rem 0;
 }
 
 .songs li {
@@ -151,6 +149,10 @@ section .container {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #eee;
+}
+
+.songs li:nth-of-type(15) {
+    border-bottom: 0px solid #eee;
 }
 
 .songs li span {
@@ -175,8 +177,12 @@ section .container {
     background-image: linear-gradient(to right, #ea37c6, #ea37c6);
 }
 
+#result {
+    padding: 2.5rem 0rem;
+}
+
 #result p {
     display: flex;
     justify-content: flex-start;
-    margin: -4rem 0 0 12.4rem;
+    margin: -3rem 0 0 12.2rem;
 }

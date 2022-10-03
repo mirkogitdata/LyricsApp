@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
+const body = document.getElementById("body");
 
 const apiURL = "https://api.lyrics.ovh";
 
@@ -8,13 +9,9 @@ const apiURL = "https://api.lyrics.ovh";
 form.addEventListener("submit", e => {
     e.preventDefault();
     searchValue = search.value.trim();
-
-    if (!searchValue) {
-        alert("Nothing to search");
-    } else {
-        beginSearch(searchValue);
-    }
-})
+    searchValue ? beginSearch(searchValue) : alert("Nothing to search");
+    search.value = '';
+});
 
 // Search function
 async function beginSearch(searchValue) {
@@ -26,6 +23,7 @@ async function beginSearch(searchValue) {
 
 // Display Search Result
 function displayData(data) {
+    body.style.background = "url(./images/music2.jpg) no-repeat center";
     result.innerHTML = `
     <ul class="songs">
       ${data.data
@@ -58,10 +56,8 @@ result.addEventListener('click', e => {
 async function getLyrics(artist, songTitle) {
     const response = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
     const data = await response.json();
-
+    body.style.background = "url(./images/music3.jpg) no-repeat center";
     const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
-
     result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle}</h2>
     <p>${lyrics}</p>`;
-
 }
