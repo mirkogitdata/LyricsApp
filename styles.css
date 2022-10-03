@@ -79,9 +79,8 @@ img {
 }
 
 header .container {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 header h1 {
@@ -113,6 +112,7 @@ form button {
     color: #fff;
     border: 2px solid transparent;
     padding: 10px 40px;
+    margin-left: 1rem;
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
@@ -125,6 +125,7 @@ form button {
 
 form button:hover {
     border: 2px solid #fff;
+    background-image: linear-gradient(to right, #ea37c6, #ea37c6);
 }
 
 section .container {
@@ -171,4 +172,11 @@ section .container {
 
 .songs li span:hover {
     border: 2px solid #fff;
+    background-image: linear-gradient(to right, #ea37c6, #ea37c6);
+}
+
+#result p {
+    display: flex;
+    justify-content: flex-start;
+    margin: -4rem 0 0 12.4rem;
 }
